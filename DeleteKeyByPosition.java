@@ -47,7 +47,15 @@ public class DeleteKeyByPosition {
 				prev=temp;
 				temp=temp.next;
 				i+=1;
+				if(temp.next==null && position>=i)
+				{
+					System.out.println("\nPlease Enter proper number!!! there will be no node on "+position+" position");
+					return;
+				} 
+				
 			}
+		
+			
 			
 			prev.next=temp.next;
 		}
@@ -60,7 +68,7 @@ public class DeleteKeyByPosition {
 			ll.push(4);
 			System.out.println("before list");
 			ll.PrintLinkedlist();
-			ll.DeleteNodeByPosition(3);
+			ll.DeleteNodeByPosition(5);
 			System.out.println("\nAfter list");
 			ll.PrintLinkedlist();
 			}
